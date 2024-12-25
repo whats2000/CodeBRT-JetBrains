@@ -1,0 +1,48 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>org.code_brt.CodeBRT_JetBrains</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>CodeBRT_JetBrains</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor url="https://whats2000.github.io/CodeBRT/">CodeBRT</vendor>
+
+    <version>2.0.2</version>
+    <change-notes>Initial release.</change-notes>
+
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description>
+        <![CDATA[
+    ## Overview
+
+    **Version**: 1.0.0
+
+    **Status**: _Stable_
+    🎉 This project has been released as a stable version and has undergone extensive testing.
+
+    **Key Features**:
+    - Instant code suggestions and autocompletion.
+    - Code analysis support for multiple programming languages.
+    - User-friendly and highly extensible.
+
+    **CodeBRT** is an AI-powered assistant designed to enhance coding efficiency for all users.
+    ]]>
+    </description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Continue" anchor="right"
+                    factoryClass="com.github.code_brt.codebrt_jetbrains.toolWindow.MyNewToolWindow"/>
+    </extensions>
+</idea-plugin>
